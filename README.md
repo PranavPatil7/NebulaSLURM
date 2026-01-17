@@ -1,4 +1,4 @@
-# multi-nodes-slurm-cluster-docker (ubuntu 20.04)
+## NebulaSLURM – Dockerized Multi-Node HPC Cluster Simulator                                               
 ![slurm-docker-jupyterlab-logo](resources/slurm-docker-jupyter-logo.png)
 Fully Dockerized Distributed Slurm cluster with CPU/GPU partition and Jupyterlab HPC extensions for Multi-nodes deployment using docker-compose.
 <div align="center">
@@ -153,11 +153,5 @@ Run sudo update-grub to update GRUB with the new settings and reboot the system.
 - add LDAP and other common authentication methods
 - add dynamic code workspace supported ( gitpod like)
 
-#### Contribution, Bugs fixes and Support
-Welcome, please create an issue.
 
-#### Acknowledgements
-Inspired by works from other Linux Distribution 
-rockylinux: [slurm-docker-cluster](https://github.com/giovtorres/slurm-docker-cluster)
-CentOS: [slurm-in-docker](https://github.com/SciDAS/slurm-in-docker)
 

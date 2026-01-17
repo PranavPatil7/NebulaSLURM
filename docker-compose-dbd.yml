@@ -1,0 +1,24 @@
+services:
+  slurmdbd:
+    image: slurm-dbd:latest
+    container_name: slurmdbd        
+    hostname: slurmdbd
+    user: slurm
+    network_mode: host    
+    volumes:
+      - /mnt/workspace:/home/slurm
+      - ./etc/slurm-llnl/cgroup.conf:/etc/slurm-llnl/cgroup.conf            
+      - ./etc/slurm-llnl/gres.conf:/etc/slurm-llnl/gres.conf            
+      - ./etc/slurm-llnl/slurm.conf:/etc/slurm-llnl/slurm.conf            
+      - ./etc/slurm-llnl/slurmdbd.conf:/etc/slurm-llnl/slurmdbd.conf                 
+      - ./dbd/docker-entrypoint.sh:/etc/slurm-llnl/docker-entrypoint.sh
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro                  
+    # ports:
+    #   - 7031:7031
+    # links:
+    #   - mariadb
+
+networks:
+  host:
+    name: host
+    external: true
